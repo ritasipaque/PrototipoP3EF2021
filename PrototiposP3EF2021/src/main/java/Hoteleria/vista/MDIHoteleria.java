@@ -38,6 +38,7 @@ public class MDIHoteleria extends javax.swing.JFrame {
     private Entregar_objeto fromObjetosPerdidosEnt;
     private BitacoraHotelera formBitacoraH;
     private HabitacionesRS UNO;
+    private ProcesoRS DOS;
     
     public static JLabel logo = new JLabel();
 
@@ -201,6 +202,11 @@ public class MDIHoteleria extends javax.swing.JFrame {
 
         menu_herramientas.setText("Procesos");
         menu_herramientas.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        menu_herramientas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu_herramientasActionPerformed(evt);
+            }
+        });
 
         jMenuItem2.setText("ProcesoReserva");
         menu_herramientas.add(jMenuItem2);
@@ -233,7 +239,7 @@ public class MDIHoteleria extends javax.swing.JFrame {
         });
         jMenuBar1.add(cerrar_sesion);
 
-        menu_procesos.setText("Procesos");
+        menu_procesos.setText("Herramientas");
         menu_procesos.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
 
         submenu_procesos.setText("Procesos");
@@ -464,6 +470,12 @@ public class MDIHoteleria extends javax.swing.JFrame {
         UNO = new HabitacionesRS();
         jDesktopPane1.add(UNO);
     }//GEN-LAST:event_MantenimientoActionPerformed
+
+    private void menu_herramientasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_herramientasActionPerformed
+        // TODO add your handling code here:
+         DOS = new ProcesoRS();
+        jDesktopPane1.add(DOS);
+    }//GEN-LAST:event_menu_herramientasActionPerformed
 
     /**
      * @param args the command line arguments
