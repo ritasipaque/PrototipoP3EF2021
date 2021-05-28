@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6fd34436-4733-4750-bb0e-24bc7c7ed2ff">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM finanzas.cheque;]]>
+	</queryString>
+	<field name="Numero_Cheque" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Fecha_Cheque" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FK_Banco" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FK_Cuenta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FK_Cuentahabiente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Monto_Cheque" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="107" y="25" width="359" height="53" uuid="c8053592-5571-458a-9d63-f664c2e127b7"/>
+				<textElement>
+					<font fontName="Californian FB" size="36" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Emision Cheque:]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="455" y="2" width="100" height="20" uuid="43263aa3-6112-4ba6-8a48-de5e8878def2"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="3" y="0" width="94" height="79" uuid="2e031ce6-dbac-4723-9ffa-46492e15a19b"/>
+				<imageExpression><![CDATA["C:\\Users\\Nay Ale\\Desktop\\rama\\SistemaHotelero\\src\\main\\java\\Finanzas\\reportes\\calk.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="3" y="34" width="549" height="1" uuid="3abb08db-5886-4587-86a6-9b8af751e198"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="92" height="20" uuid="1979f895-bd83-4bcf-821b-ce55aa420b3b"/>
+				<text><![CDATA[Numero]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="0" width="92" height="20" uuid="e572a691-428f-435e-b695-fdadb58d633e"/>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="0" width="92" height="20" uuid="5cff66ac-78c8-44d0-95a5-f1580f62bbfd"/>
+				<text><![CDATA[Banco]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="0" width="92" height="20" uuid="5370bf74-12ee-46c9-830a-df840e55c284"/>
+				<text><![CDATA[Cuenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="368" y="0" width="92" height="20" uuid="d4968e5a-28b5-4b90-b689-35f1d5ee5741"/>
+				<text><![CDATA[Paguese a]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="0" width="92" height="20" uuid="718a8063-2b9b-4280-b0ca-ab4b2337f169"/>
+				<text><![CDATA[Monto]]></text>
+			</staticText>
+			<line>
+				<reportElement x="3" y="19" width="552" height="1" uuid="fff5d0d3-b7f7-4592-81c9-63359b62efcf"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="92" height="20" uuid="e42365e4-6ea3-4ea8-b4a6-4ae13e9e316c"/>
+				<textFieldExpression><![CDATA[$F{Numero_Cheque}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="0" width="92" height="20" uuid="2fdc9980-e6aa-40ea-bdd1-509852ad806a"/>
+				<textFieldExpression><![CDATA[$F{Fecha_Cheque}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="184" y="0" width="92" height="20" uuid="7e6ba2e5-7d36-4ff2-b11a-187174c5f045"/>
+				<textFieldExpression><![CDATA[$F{FK_Banco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="0" width="92" height="20" uuid="b3573024-b00b-43e3-b094-40af6b1e76e4"/>
+				<textFieldExpression><![CDATA[$F{FK_Cuenta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="0" width="92" height="20" uuid="622a7782-851e-48b2-9e00-d31486779cad"/>
+				<textFieldExpression><![CDATA[$F{FK_Cuentahabiente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="0" width="92" height="20" uuid="2dc77d76-1a75-439d-a556-07661174ebea"/>
+				<textFieldExpression><![CDATA[$F{Monto_Cheque}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="28" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="229" y="15" width="100" height="20" uuid="93c22b81-43b9-4fec-996f-9cb8c0156439"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="29" splitType="Stretch"/>
+	</summary>
+</jasperReport>

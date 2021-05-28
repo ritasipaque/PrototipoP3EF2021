@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="633a77b9-5a0b-4f98-9bee-b3026625bf30">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="278"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM hoteleria.tbl_ama_de_llaves;]]>
+	</queryString>
+	<field name="PK_id_ama_de_llaves" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre_ama_de_llaves" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellido_ama_de_llaves" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="piso_ama_de_llaves" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="entrada_ama_de_llaves" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="salida_ama_de_llaves" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="inicio_labores_ama_de_llaves" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion_ama_de_llaves" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado_ama_de_llaves" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="179" y="11" width="425" height="56" uuid="725905e6-4f4d-4fdf-95db-884e842a0206"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="36" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Ama de Llaves]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="668" y="31" width="100" height="20" uuid="85d785ae-3bfe-44c5-a3b6-7d8ab1689aa3"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="42" y="3" width="75" height="76" uuid="3f6d9963-5175-4da6-96cf-3b4561db7666"/>
+				<imageExpression><![CDATA["C:\\Users\\Jeff\\Desktop\\Nueva carpeta\\Proyectos-UMG\\SistemaHotelero\\src\\main\\java\\Hoteleria\\reportes\\Imagen1.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="16" width="53" height="20" uuid="78871b7a-9c3e-40c9-9b3b-47a6032757fd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="16" width="126" height="20" uuid="5b7cc811-3f3e-4514-85c2-11613b70fbe6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="179" y="16" width="118" height="20" uuid="6cdacda0-9b93-4265-96df-d7d9d529a11f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Apellido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="297" y="16" width="49" height="20" uuid="12d0f41c-9b0e-4a4d-b355-015c421ce557"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Piso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="346" y="16" width="63" height="20" uuid="5097e9de-f76b-490a-bb20-0bf9df72f2ca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Entrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="409" y="16" width="63" height="20" uuid="18c7c380-7b80-4f2e-bf2e-7b62178ed721"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Salida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="16" width="93" height="20" uuid="04e9b498-e50a-4e3e-9979-86bd04b2469b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Inicio Laboral]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="565" y="16" width="183" height="20" uuid="f66cb179-15ae-4f04-b9e1-47fd14e43a39"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Descripcion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="748" y="18" width="54" height="18" uuid="6256e4e0-eb6f-49df-b05e-5087e15217cc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Estado]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="36" width="802" height="1" uuid="5286e670-0924-4b65-9108-7be4825a808e"/>
+			</line>
+			<line>
+				<reportElement x="0" y="14" width="802" height="2" uuid="ed8203fc-f3f7-4c28-9461-4905883497b4"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="48" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="17" width="53" height="20" uuid="9cb4be07-070a-41f8-ba08-e9dcd00e1273"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{PK_id_ama_de_llaves}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="53" y="17" width="126" height="20" uuid="17873d98-0d8a-40d7-8c4f-b933ac985714"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombre_ama_de_llaves}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="179" y="17" width="118" height="20" uuid="24849b32-b229-4a56-9e5e-ea81bad9b895"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{apellido_ama_de_llaves}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="297" y="17" width="49" height="20" uuid="ec63e236-1026-47e1-9b63-b1d323c7728b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{piso_ama_de_llaves}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="346" y="17" width="63" height="20" uuid="39e93b7c-2560-4694-8edf-39beea9df550"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{entrada_ama_de_llaves}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="409" y="17" width="63" height="20" uuid="c4541981-322b-4be1-94dd-a4bbfdf68b23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{salida_ama_de_llaves}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="472" y="17" width="93" height="20" uuid="73a7a3d6-ab3e-4c61-883c-ca862ee5121c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{inicio_labores_ama_de_llaves}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="565" y="17" width="183" height="31" uuid="973af765-c444-46f0-a403-3410e5c34e8c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{descripcion_ama_de_llaves}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="748" y="17" width="54" height="20" uuid="e14cb021-ccae-4f85-976e-ed06fe6606ac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{estado_ama_de_llaves}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="30" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="399" y="34" width="100" height="20" uuid="ebdc3530-944b-4af0-b5d8-459403088a0c"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="10" splitType="Stretch"/>
+	</summary>
+</jasperReport>

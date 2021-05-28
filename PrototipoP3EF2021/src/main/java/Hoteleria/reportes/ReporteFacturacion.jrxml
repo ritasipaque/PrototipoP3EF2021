@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4995ff6e-8904-4892-93c6-a65d7597f535">
+	<property name="ireport.zoom" value="1.3310000000000006"/>
+	<property name="ireport.x" value="132"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM hoteleria.tbl_facturacion;]]>
+	</queryString>
+	<field name="PK_id_factura" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PK_id_reservacion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre_factura" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaEntrada_factura" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaSalida_factura" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="formaPago_factura" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="totalReservacion_factura" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="totalServicios_factura" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="totalFacturacion_factura" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="231" y="14" width="359" height="53" uuid="580a9bdc-c48d-41ec-a563-81246d539817"/>
+				<textElement textAlignment="Center">
+					<font size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Facturación]]></text>
+			</staticText>
+			<image>
+				<reportElement x="42" y="3" width="75" height="76" uuid="8949a122-8144-46b3-b063-e1133986909e"/>
+				<imageExpression><![CDATA["C:\\Users\\Jeff\\Desktop\\Nueva carpeta\\Proyectos-UMG\\SistemaHotelero\\src\\main\\java\\Hoteleria\\reportes\\Imagen1.png"]]></imageExpression>
+			</image>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="652" y="38" width="100" height="20" uuid="6bc830fd-f0cb-40f8-97d9-c6334adc1ef2"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="14" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="15" y="20" width="69" height="20" uuid="692cd0ad-f1f4-4233-aa3f-b403a5985a9a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[No. Factura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="84" y="20" width="70" height="20" uuid="380cdb3d-92e4-4abb-a097-294dceba0f7c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[No. Reserva]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="20" width="100" height="20" uuid="f2d25606-6bb4-467f-9444-a40fb20c459d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nombre Factura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="254" y="20" width="80" height="20" uuid="6336dc97-aade-4c97-b0b6-008453f7163d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Fecha Entrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="20" width="81" height="20" uuid="b878e1b3-305f-4cce-81a1-946ae370a349"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Fecha Salida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="20" width="100" height="20" uuid="a93648c1-be8b-426b-b845-915ba709c702"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Método de Pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="20" width="88" height="20" uuid="f7822151-e67d-410c-90d5-545402f9c9d8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Total Reservación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="603" y="20" width="82" height="20" uuid="aacfdde9-4de2-4293-97f8-e9fd91119796"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Total Servicios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="685" y="20" width="100" height="20" uuid="2cdfab42-945e-451e-b39e-4c73601430d2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Total Facturación]]></text>
+			</staticText>
+			<line>
+				<reportElement x="15" y="19" width="770" height="1" uuid="94b01b2c-52ff-4dc6-8fb4-c9689e9ec2c9"/>
+			</line>
+			<line>
+				<reportElement x="15" y="39" width="770" height="1" uuid="3a38e687-69eb-4cf5-95ae-6c42f1e27c78"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="46" splitType="Stretch">
+			<textField>
+				<reportElement x="15" y="10" width="69" height="20" uuid="d1a2f832-7d35-4ccc-9735-89750b67f127"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{PK_id_factura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="84" y="10" width="70" height="20" uuid="92397976-bc01-4036-9386-657dc1cb8d7d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{PK_id_reservacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="10" width="100" height="20" uuid="ae1c59f8-fb17-40ef-8432-b9e394f1f569"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombre_factura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="254" y="10" width="80" height="20" uuid="eb207a4a-a92e-444b-9b59-fb9f56d6a024"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fechaEntrada_factura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="334" y="10" width="81" height="20" uuid="1a2a0e7f-8ca1-4628-8a1f-4ad115a06c2d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fechaSalida_factura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="10" width="100" height="20" uuid="0194bc99-1919-49fc-94f8-ff46cc2b050d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{formaPago_factura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="515" y="10" width="88" height="20" uuid="e10f8364-5cfc-4b21-80d4-067962e30c9c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{totalReservacion_factura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="603" y="10" width="82" height="20" uuid="e99a6a75-10f9-4570-a031-4d39796f48f8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{totalServicios_factura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="685" y="10" width="100" height="20" uuid="44eb26ab-b741-4210-9773-9d7e90b0115b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{totalFacturacion_factura}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="415" y="34" width="100" height="20" uuid="243885cb-7a05-402a-9dc6-3d78056e2a41"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="5" splitType="Stretch"/>
+	</summary>
+</jasperReport>

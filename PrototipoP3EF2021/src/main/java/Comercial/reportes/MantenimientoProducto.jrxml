@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4413c719-f6d7-40c8-ae07-cd752cad794e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM areacomercial.tbl_producto;]]>
+	</queryString>
+	<field name="PK_id_producto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre_producto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precio_producto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion_producto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estatus_producto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bodega" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaIngreso" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="4" y="27" width="100" height="20" uuid="61381c3b-c786-48b6-8fa8-69644db088cb"/>
+				<text><![CDATA[PK_id_producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="108" y="27" width="100" height="20" uuid="5239ab65-9fa7-4812-8c52-99649372399e"/>
+				<text><![CDATA[nombre_producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="25" width="100" height="20" uuid="aaf55f62-f8e5-4328-a529-e400c9a01375"/>
+				<text><![CDATA[precio_producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="27" width="100" height="20" uuid="96fdcbc3-c552-4d47-8f32-1c48af665c60"/>
+				<text><![CDATA[descripcion_producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="441" y="25" width="100" height="20" uuid="d7084bfd-2134-4914-834b-3cd311914612"/>
+				<text><![CDATA[estatus_producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="541" y="25" width="74" height="20" uuid="1c2a2963-2042-4f12-a477-7e9e3d92cba3"/>
+				<text><![CDATA[bodega]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="615" y="25" width="100" height="20" uuid="7dc28817-ac44-4f73-98c1-50c1bee5347c"/>
+				<text><![CDATA[fechaIngreso]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="4" y="16" width="100" height="20" uuid="65680ea0-b8d2-4e7c-921b-995f1f1985cd"/>
+				<textFieldExpression><![CDATA[$F{PK_id_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="108" y="21" width="110" height="20" uuid="ec764bc5-e1b5-46c1-9aed-0ebf75f4180d"/>
+				<textFieldExpression><![CDATA[$F{nombre_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="218" y="21" width="100" height="20" uuid="5beb2703-1f09-4869-9a37-41c41a2ae8d3"/>
+				<textFieldExpression><![CDATA[$F{precio_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="21" width="123" height="20" uuid="67bac4a5-15ef-49d2-a72c-1470c52a6c04"/>
+				<textFieldExpression><![CDATA[$F{descripcion_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="441" y="16" width="100" height="20" uuid="56af3bc1-6fbf-4eaf-8da0-03b2e88fd05f"/>
+				<textFieldExpression><![CDATA[$F{estatus_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="547" y="16" width="68" height="20" uuid="a12c47b8-9d09-4223-ba8b-7043186d1a71"/>
+				<textFieldExpression><![CDATA[$F{bodega}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="615" y="16" width="100" height="20" uuid="e1302bb2-a605-49fb-92ca-24bcdc4a5992"/>
+				<textFieldExpression><![CDATA[$F{fechaIngreso}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

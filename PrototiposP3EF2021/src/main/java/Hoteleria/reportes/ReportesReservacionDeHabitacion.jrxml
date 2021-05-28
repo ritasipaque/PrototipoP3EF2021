@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e08274cb-716a-4477-b4b0-66f5c47edefd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM hoteleria.tbl_reservaciones;]]>
+	</queryString>
+	<field name="PK_id_reservacion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PK_no_identificacion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PK_id_habitacion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad_personas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_reserva" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="desde" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hasta" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="652" y="35" width="100" height="20" uuid="9567e8ae-bd79-402a-b68c-542921630d14"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="68" y="0" width="584" height="79" uuid="0f465b53-a057-457f-8b12-a83c7fa32597"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="30" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Reportes de Reservación de las Habitaciones]]></text>
+			</staticText>
+			<image>
+				<reportElement x="29" y="3" width="75" height="76" uuid="8402552a-da8e-463e-b178-447f2e366eed"/>
+				<imageExpression><![CDATA["C:\\Users\\Jeff\\Desktop\\Nueva carpeta\\Proyectos-UMG\\SistemaHotelero\\src\\main\\java\\Hoteleria\\reportes\\Imagen1.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="16" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="6" width="44" height="36" uuid="86e5578e-b827-455d-a842-d17cc23cf6b7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="5" width="752" height="1" uuid="415ecdc0-5bfd-4363-b7ea-9fa8f3510ee5"/>
+			</line>
+			<line>
+				<reportElement x="0" y="41" width="752" height="1" uuid="d473fb9c-66ee-4601-9f04-d1e2f3640894"/>
+			</line>
+			<staticText>
+				<reportElement x="82" y="6" width="77" height="35" uuid="b36a57c7-1835-410b-a9f5-4eb68712ea0f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DPI Cliente:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="6" width="84" height="35" uuid="fe7907fa-2be0-47a6-bf22-a4724e8d7e26"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Habitación:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="6" width="120" height="35" uuid="603aa16e-faac-4815-b7de-0a6facd7011e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad de Personas:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="458" y="6" width="100" height="35" uuid="32b24afe-7248-4631-8e43-f0879dceab15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha Reservada:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="584" y="6" width="68" height="35" uuid="71caf893-a712-4b61-a921-c81f6ad54281"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Desde;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="672" y="6" width="80" height="35" uuid="a5352b0d-dc2f-4593-b023-a06ea334c144"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hasta:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="68" height="33" uuid="23431341-a4f8-498b-90c8-a7ca7a2ce1dc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{PK_id_reservacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="0" width="77" height="33" uuid="1fa2485c-def1-4ecf-a40d-a6d6bced0c33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{PK_no_identificacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="187" y="0" width="84" height="33" uuid="89a9a7f5-4415-4a90-93e7-3e78f1ff3515"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{PK_id_habitacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="303" y="0" width="120" height="33" uuid="5dd26594-727c-4b06-bf70-68d3b01d5840"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{cantidad_personas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="458" y="0" width="100" height="33" uuid="f2d050d6-2ca4-4a26-8ea2-aa6b884e4590"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fecha_reserva}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="584" y="0" width="68" height="33" uuid="df55146f-51a8-414e-909a-e43999dbdf79"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{desde}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="672" y="0" width="80" height="33" uuid="c45d536c-3c05-44fa-8e7d-fc36ba452080"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{hasta}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="22" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="752" height="20" uuid="b1f1e342-3afe-4750-a4ec-2792aa0904a2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

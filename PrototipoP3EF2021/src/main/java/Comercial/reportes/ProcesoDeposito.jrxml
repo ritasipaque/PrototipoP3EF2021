@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="74be18a7-1f30-4f08-80ea-00cccf3013a6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM areacomercial.depositos;]]>
+	</queryString>
+	<field name="Id_pedido" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Cliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cuenta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Fecha_inicial" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Fecha_final" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nit" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="producto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Detalle" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Cantidad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="-6" y="23" width="539" height="56" uuid="3986b95c-f3bb-4b5b-a6a1-f3226a39e93d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="30" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Reporte Proceso Deposito]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="65" height="20" uuid="d5cb2eb0-1ecd-43ac-b0b7-f98800215768"/>
+				<text><![CDATA[Id_pedido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="76" y="0" width="61" height="20" uuid="9d0b08b4-95b6-44cb-af54-5e5696954f18"/>
+				<text><![CDATA[Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="151" y="0" width="63" height="20" uuid="2f1abd8d-182a-45fe-8ee2-dc71e68836e6"/>
+				<text><![CDATA[cuenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="233" y="2" width="64" height="20" uuid="800c6b71-a607-4e82-b2d6-f8bce20e1315"/>
+				<text><![CDATA[Fecha_inicial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="0" width="84" height="20" uuid="125c9125-a644-4b0f-b838-b914b92c1244"/>
+				<text><![CDATA[Fecha_final]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="0" width="100" height="20" uuid="ebe43b08-d79a-42fd-b828-d95ea9b86657"/>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="16" width="65" height="20" uuid="fd2f20b0-1cc1-4eda-97c7-d7beb2a30262"/>
+				<textFieldExpression><![CDATA[$F{Id_pedido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="16" width="72" height="20" uuid="a91dd460-b363-4aaf-a82a-7b36abeb2151"/>
+				<textFieldExpression><![CDATA[$F{Cliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="151" y="16" width="63" height="20" uuid="c1ef38ea-699d-43c7-9172-31663bf3c143"/>
+				<textFieldExpression><![CDATA[$F{cuenta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="233" y="16" width="64" height="20" uuid="df712ee0-a278-4133-bdbc-dc48ed2f7047"/>
+				<textFieldExpression><![CDATA[$F{Fecha_inicial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="316" y="16" width="84" height="20" uuid="4d8c3cfb-ebfd-490f-bb7e-b3abfdf60051"/>
+				<textFieldExpression><![CDATA[$F{Fecha_final}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="16" width="100" height="20" uuid="44b8bdf1-d8af-44b6-b9c5-c389f5e74bd5"/>
+				<textFieldExpression><![CDATA[$F{Cantidad}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
