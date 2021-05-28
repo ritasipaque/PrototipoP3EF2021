@@ -124,6 +124,9 @@
               <Font name="Verdana" size="14" style="1"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menu_herramientasActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
           </AuxValues>
@@ -183,7 +186,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="menu_procesos">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Procesos"/>
+            <Property name="text" type="java.lang.String" value="Herramientas"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Verdana" size="14" style="1"/>
             </Property>
