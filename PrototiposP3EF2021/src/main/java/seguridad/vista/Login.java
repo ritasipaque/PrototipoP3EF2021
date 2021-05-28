@@ -5,8 +5,7 @@
  */
 package seguridad.vista;
 
-import Comercial.vista.MDIComercial;
-import Finanzas.vista.MDIFinanzas;
+
 import Hoteleria.vista.MDIHoteleria;
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatLightLaf;
@@ -105,7 +104,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel5.setText("Seleccione el Area");
 
-        cbxAcceso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione: ", "Area Seguridad", "Area Hoteleria", "Area Finanzas", "Area Comercial", " " }));
+        cbxAcceso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione: ", "Area Seguridad", "Area Hoteleria", " " }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -244,29 +243,8 @@ public class Login extends javax.swing.JFrame {
                         }
                         break;
 
-                        case "Area Finanzas":
-                                 try {
-                            usuarioFianzas = txtUsuario.getText();
-                            MDIFinanzas menuFinanzas = new MDIFinanzas();
-                            menuFinanzas.setVisible(true);
-                            this.dispose();
-                        } catch (Exception e) {
-                            System.out.println(e);
-                        }
-                        break;
-
-                        case "Area Comercial":
-                                
-                               try {
-                            usuarioComercial = txtUsuario.getText();
-                            MDIComercial menucomercial = new MDIComercial();
-                            menucomercial.setVisible(true);
-                            this.dispose();
-
-                        } catch (Exception e) {
-                            System.out.println(e);
-                        }
-                        break;
+                       
+                        
 
                         default:
                     }

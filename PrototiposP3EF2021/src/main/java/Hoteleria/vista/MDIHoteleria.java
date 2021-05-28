@@ -21,7 +21,7 @@ import seguridad.vista.Login;
 
 /**
  *
- * @author Herbert Leonel Dominguez Chavez 9959-19-5644
+ * @author 
  */
 public class MDIHoteleria extends javax.swing.JFrame {
 
@@ -37,6 +37,7 @@ public class MDIHoteleria extends javax.swing.JFrame {
     private ObjetosPerdidos fromObjetosPerdidos;
     private Entregar_objeto fromObjetosPerdidosEnt;
     private BitacoraHotelera formBitacoraH;
+    private HabitacionesRS UNO;
     
     public static JLabel logo = new JLabel();
 
@@ -92,6 +93,13 @@ public class MDIHoteleria extends javax.swing.JFrame {
         mnt_huespedes = new javax.swing.JMenuItem();
         mnt_formasdepago = new javax.swing.JMenuItem();
         mnt_pisos = new javax.swing.JMenuItem();
+        Mantenimiento = new javax.swing.JMenuItem();
+        menu_herramientas = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        menu_informes = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        menu_ayuda = new javax.swing.JMenu();
+        cerrar_sesion = new javax.swing.JMenu();
         menu_procesos = new javax.swing.JMenu();
         submenu_procesos = new javax.swing.JMenu();
         Entregar_Recibir_Habitacion = new javax.swing.JMenuItem();
@@ -99,11 +107,6 @@ public class MDIHoteleria extends javax.swing.JFrame {
         Facturacion = new javax.swing.JMenuItem();
         Objetos_Perdidos = new javax.swing.JMenuItem();
         Entrega_Objetos_Perdidos = new javax.swing.JMenuItem();
-        menu_informes = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        menu_herramientas = new javax.swing.JMenu();
-        menu_ayuda = new javax.swing.JMenu();
-        cerrar_sesion = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -122,7 +125,7 @@ public class MDIHoteleria extends javax.swing.JFrame {
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 701, Short.MAX_VALUE)
+            .addGap(0, 703, Short.MAX_VALUE)
         );
 
         jMenuBar1.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -186,7 +189,49 @@ public class MDIHoteleria extends javax.swing.JFrame {
 
         menu_catalogos.add(submenu_mantenimientos);
 
+        Mantenimiento.setText("Mantenimiento Habitaciones");
+        Mantenimiento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MantenimientoActionPerformed(evt);
+            }
+        });
+        menu_catalogos.add(Mantenimiento);
+
         jMenuBar1.add(menu_catalogos);
+
+        menu_herramientas.setText("Procesos");
+        menu_herramientas.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+
+        jMenuItem2.setText("ProcesoReserva");
+        menu_herramientas.add(jMenuItem2);
+
+        jMenuBar1.add(menu_herramientas);
+
+        menu_informes.setText("Informes");
+        menu_informes.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+
+        jMenuItem1.setText("Historial de Bitacora");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        menu_informes.add(jMenuItem1);
+
+        jMenuBar1.add(menu_informes);
+
+        menu_ayuda.setText("Ayuda");
+        menu_ayuda.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jMenuBar1.add(menu_ayuda);
+
+        cerrar_sesion.setText("Cerrar Sesión");
+        cerrar_sesion.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        cerrar_sesion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cerrar_sesionMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(cerrar_sesion);
 
         menu_procesos.setText("Procesos");
         menu_procesos.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
@@ -236,36 +281,6 @@ public class MDIHoteleria extends javax.swing.JFrame {
         menu_procesos.add(submenu_procesos);
 
         jMenuBar1.add(menu_procesos);
-
-        menu_informes.setText("Informes");
-        menu_informes.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-
-        jMenuItem1.setText("Historial de Bitacora");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        menu_informes.add(jMenuItem1);
-
-        jMenuBar1.add(menu_informes);
-
-        menu_herramientas.setText("Herramientas");
-        menu_herramientas.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jMenuBar1.add(menu_herramientas);
-
-        menu_ayuda.setText("Ayuda");
-        menu_ayuda.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jMenuBar1.add(menu_ayuda);
-
-        cerrar_sesion.setText("Cerrar Sesión");
-        cerrar_sesion.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        cerrar_sesion.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                cerrar_sesionMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(cerrar_sesion);
 
         setJMenuBar(jMenuBar1);
 
@@ -444,6 +459,12 @@ public class MDIHoteleria extends javax.swing.JFrame {
     guardaraccion.GuardarEnBitacora("Salir","2000", Login.usuarioHoteleria);
     }//GEN-LAST:event_formWindowClosing
 
+    private void MantenimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MantenimientoActionPerformed
+        // TODO add your handling code here:
+        UNO = new HabitacionesRS();
+        jDesktopPane1.add(UNO);
+    }//GEN-LAST:event_MantenimientoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -471,12 +492,14 @@ public class MDIHoteleria extends javax.swing.JFrame {
     public static javax.swing.JMenuItem Entrega_Objetos_Perdidos;
     public static javax.swing.JMenuItem Entregar_Recibir_Habitacion;
     public static javax.swing.JMenuItem Facturacion;
+    private javax.swing.JMenuItem Mantenimiento;
     public static javax.swing.JMenuItem Objetos_Perdidos;
     public static javax.swing.JMenuItem Reserva_De_Habitacion;
     public static javax.swing.JMenu cerrar_sesion;
     public static javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     public static javax.swing.JMenu menu_archivo;
     public static javax.swing.JMenu menu_ayuda;
     public static javax.swing.JMenu menu_catalogos;
