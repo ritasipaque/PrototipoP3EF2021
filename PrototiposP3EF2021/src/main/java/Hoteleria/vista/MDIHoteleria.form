@@ -107,7 +107,79 @@
                 </MenuItem>
               </SubComponents>
             </Menu>
+            <MenuItem class="javax.swing.JMenuItem" name="Mantenimiento">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Mantenimiento Habitaciones"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MantenimientoActionPerformed"/>
+              </Events>
+            </MenuItem>
           </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="menu_herramientas">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Procesos"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Verdana" size="14" style="1"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+          </AuxValues>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="ProcesoReserva"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="menu_informes">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Informes"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Verdana" size="14" style="1"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+          </AuxValues>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Historial de Bitacora"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="menu_ayuda">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ayuda"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Verdana" size="14" style="1"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+          </AuxValues>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="cerrar_sesion">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cerrar Sesi&#xf3;n"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Verdana" size="14" style="1"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="cerrar_sesionMouseClicked"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+          </AuxValues>
         </Menu>
         <Menu class="javax.swing.JMenu" name="menu_procesos">
           <Properties>
@@ -187,63 +259,6 @@
             </Menu>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="menu_informes">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Informes"/>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Verdana" size="14" style="1"/>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
-          </AuxValues>
-          <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Historial de Bitacora"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
-              </Events>
-            </MenuItem>
-          </SubComponents>
-        </Menu>
-        <Menu class="javax.swing.JMenu" name="menu_herramientas">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Herramientas"/>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Verdana" size="14" style="1"/>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
-          </AuxValues>
-        </Menu>
-        <Menu class="javax.swing.JMenu" name="menu_ayuda">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Ayuda"/>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Verdana" size="14" style="1"/>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
-          </AuxValues>
-        </Menu>
-        <Menu class="javax.swing.JMenu" name="cerrar_sesion">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Cerrar Sesi&#xf3;n"/>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Verdana" size="14" style="1"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="cerrar_sesionMouseClicked"/>
-          </Events>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
-          </AuxValues>
-        </Menu>
       </SubComponents>
     </Menu>
   </NonVisualComponents>
@@ -301,7 +316,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="701" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="703" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
