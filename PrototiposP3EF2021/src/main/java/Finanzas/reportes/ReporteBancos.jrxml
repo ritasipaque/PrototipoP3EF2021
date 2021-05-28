@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fe69a52f-c212-4770-996e-7ed241098797">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM finanzas.banco;]]>
+	</queryString>
+	<field name="Codigo_Banco" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre_Banco" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Clave_Banco" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Telefono_Banco" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="87" splitType="Stretch">
+			<staticText>
+				<reportElement x="111" y="12" width="359" height="53" uuid="86841ed7-7d66-4114-9851-26232d75046e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Californian FB" size="36" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Banco]]></text>
+			</staticText>
+			<image>
+				<reportElement x="2" y="0" width="119" height="87" uuid="afcca000-7502-44f5-9a8f-aa4f9650e654"/>
+				<imageExpression><![CDATA["C:\\Users\\Nay Ale\\Desktop\\rama\\SistemaHotelero\\src\\main\\java\\Finanzas\\reportes\\calk.jpg"]]></imageExpression>
+			</image>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="455" y="0" width="100" height="20" uuid="5eec1a2a-1102-4ec7-bd09-6b457adb048f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="138" height="20" uuid="7a4c438b-6e33-49d2-ba36-e085f5c8cb2f"/>
+				<text><![CDATA[Codigo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="0" width="138" height="20" uuid="dd4fa3f6-b955-40f7-b6cf-b06f0b0716c7"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="0" width="138" height="20" uuid="7c8a1a74-994b-4328-8f8b-5abf09e8b6a6"/>
+				<text><![CDATA[Clave]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="0" width="138" height="20" uuid="59d30999-802d-49cb-b3d9-38cc5907ed8c"/>
+				<text><![CDATA[Telefono]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="20" width="551" height="1" uuid="917e73e5-ed48-46c3-976f-50a8aa5861ca"/>
+			</line>
+			<line>
+				<reportElement x="2" y="1" width="550" height="1" uuid="62ee3529-e7c9-40f5-8a1d-570143eab898"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="138" height="20" uuid="02f2a31e-5e03-497a-b001-21d0592c8cd6"/>
+				<textFieldExpression><![CDATA[$F{Codigo_Banco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="0" width="138" height="20" uuid="a2ddc324-11bf-46d6-a802-0fdbd2ceb401"/>
+				<textFieldExpression><![CDATA[$F{Nombre_Banco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="0" width="138" height="20" uuid="9c311de1-2492-4f0c-b955-25842b941d4f"/>
+				<textFieldExpression><![CDATA[$F{Clave_Banco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="0" width="138" height="20" uuid="023002d4-a800-4f73-8bc7-1f97f5c24eb2"/>
+				<textFieldExpression><![CDATA[$F{Telefono_Banco}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="21" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="228" y="18" width="100" height="20" uuid="58ffdd40-5c96-4290-84e1-0a4f4890d1f6"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="26" splitType="Stretch"/>
+	</summary>
+</jasperReport>

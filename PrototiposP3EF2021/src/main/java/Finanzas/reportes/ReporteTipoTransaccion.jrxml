@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="21912583-9e49-48e3-9caa-9d4f1681c598">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="logo" class="java.io.InputStream"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM finanzas.TipoTransaccion;]]>
+	</queryString>
+	<field name="Codigo_TipoTransaccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Transaccion_Tipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Efecto_TipoTransaccion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="97" splitType="Stretch">
+			<staticText>
+				<reportElement x="85" y="44" width="359" height="53" uuid="9ecb03f2-b156-47a4-bef2-ab473386fbf8"/>
+				<textElement>
+					<font fontName="Californian FB" size="36" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[ Tipo De Transaccion:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="444" y="0" width="109" height="25" uuid="7f59edee-2870-4cf2-b2e0-96e41881dccf"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="4" y="11" width="146" height="62" uuid="829f7077-689c-44d9-ba34-4d621594d35a"/>
+				<imageExpression><![CDATA["C:\\Users\\TagoKG\\Desktop\\Proyecto Seguridad\\SistemaHotelero\\src\\main\\java\\Finanzas\\reportes\\calk.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="14" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="100" height="20" uuid="ea75fd3c-4eb3-4fc8-971e-9e0ddb696603"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<text><![CDATA[Codigo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="10" width="145" height="20" uuid="b951632f-af94-4670-9458-2511609e0748"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<text><![CDATA[Tipo de Transaccion:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="344" y="10" width="153" height="20" uuid="b6686fbc-2b7a-4e99-8343-e89e6d1d453e"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<text><![CDATA[Efecto Tipo de Transaccion:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="10" width="553" height="1" uuid="29ceb034-6790-4abf-bd57-b7d0c8f9e4ad"/>
+			</line>
+			<line>
+				<reportElement x="0" y="29" width="555" height="1" uuid="de230cc0-8a72-4941-b018-7ba3feecb6a1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="0" width="100" height="20" uuid="bf29d43d-a68e-4375-b6bb-56c5363d0ccc"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Codigo_TipoTransaccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="0" width="100" height="20" uuid="ed054990-0bca-480e-838a-3b4804137cb8"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Transaccion_Tipo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="344" y="0" width="100" height="20" uuid="4f9571a7-fe44-4832-a244-e8970fd57f8c"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Efecto_TipoTransaccion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="8" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="225" y="16" width="100" height="20" uuid="4b14f476-0292-4b4d-8cbc-b15f8fc3ba9b"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="8" splitType="Stretch"/>
+	</summary>
+</jasperReport>

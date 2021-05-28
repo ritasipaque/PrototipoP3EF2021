@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="76960ed4-45cd-4536-893d-7c633729ba13">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM cuentacontable]]>
+	</queryString>
+	<field name="Codigo_CuentaContable" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre_CuentaContable" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Clasificacion_CuentaContable" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Estado_CuentaContable" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="Codigo_CuentaContable">
+		<groupExpression><![CDATA[$F{Codigo_CuentaContable}]]></groupExpression>
+	</group>
+	<group name="Nombre_CuentaContable">
+		<groupExpression><![CDATA[$F{Nombre_CuentaContable}]]></groupExpression>
+	</group>
+	<group name="Clasificacion_CuentaContable">
+		<groupExpression><![CDATA[$F{Clasificacion_CuentaContable}]]></groupExpression>
+	</group>
+	<group name="Estado_CuentaContable">
+		<groupExpression><![CDATA[$F{Estado_CuentaContable}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="66" height="79" uuid="850b9dbf-760e-496a-a609-81c5dc695087"/>
+				<imageExpression><![CDATA["C:\\Users\\Windows 10\\Documents\\Programación\\Proyecto Finanzas\\SistemaHotelero\\src\\main\\java\\Finanzas\\reportes\\calk.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="66" y="0" width="506" height="79" uuid="28cd7917-54ff-43e1-844e-5d501c51df67"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Open Sans" size="36"/>
+				</textElement>
+				<text><![CDATA[Cuentas Contables]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="f2647b0f-071e-4853-81c5-6282a0bd7e8f"/>
+				<text><![CDATA[Codigo_CuentaContable]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="b4feaa31-0aca-417c-8db1-4d65065669b2"/>
+				<text><![CDATA[Nombre_CuentaContable]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="20" uuid="78a9d521-2a78-44b0-92fe-fe3bfa66ed77"/>
+				<text><![CDATA[Clasificacion_CuentaContable]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="20" uuid="11c51a16-334f-4fd8-9f4c-b206b00da8f6"/>
+				<text><![CDATA[Estado_CuentaContable]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="f49c28c3-0151-44f8-a73c-692203f52845"/>
+				<textFieldExpression><![CDATA[$F{Codigo_CuentaContable}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="c0451c24-18b1-4401-8322-fa3ab1bffdbe"/>
+				<textFieldExpression><![CDATA[$F{Nombre_CuentaContable}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="8b7b76dc-616f-4d3d-83d7-64be6092600e"/>
+				<textFieldExpression><![CDATA[$F{Clasificacion_CuentaContable}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="20" uuid="db2144bb-8257-4860-af19-ed8b862f21cb"/>
+				<textFieldExpression><![CDATA[$F{Estado_CuentaContable}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

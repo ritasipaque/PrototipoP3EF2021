@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="51369c6e-57ed-4a4d-8c81-2ddac75437a6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM areacomercial.tbl_compra;]]>
+	</queryString>
+	<field name="Id_Factura" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Id_proveedor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre_proveedor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nit_proveedor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Id_producto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre_producto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Precio_producto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Cantidad_producto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Subtotal_producto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Total_producto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Fecha_producto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Pago_producto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="91" splitType="Stretch">
+			<image>
+				<reportElement x="25" y="-12" width="109" height="103" uuid="89e3ee1d-0060-43cd-98a8-6e5fbb41d50a"/>
+				<imageExpression><![CDATA["C:\\Users\\SipaqueRitaMaria.LAPTOP-TII06UQE\\Desktop\\programas\\Existencia\\src\\Captura.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="35" y="0" width="539" height="56" uuid="b9b6efe7-6126-46aa-9178-fd1011d7063e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="30" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Reporte Compras]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="41" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="40" width="555" height="1" uuid="887a9a48-3b62-46e3-8c72-125ee110ac85"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="44" height="20" uuid="46e0c137-c332-47c6-a1a9-4dbd06ad9332"/>
+				<text><![CDATA[Factura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="2" width="55" height="20" uuid="e5ec88cd-1cc7-4385-92ae-573e7d165f9f"/>
+				<text><![CDATA[Proveedor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="2" width="25" height="20" uuid="c228f842-d9f2-4de7-a7bc-150abee8b59d"/>
+				<text><![CDATA[Nit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="2" width="100" height="20" uuid="5697fe4f-582c-4cd8-8f48-a04ac99f1f8c"/>
+				<text><![CDATA[Producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="41" height="20" uuid="71445ecf-6973-4c83-8eeb-59a0bbf35bcf"/>
+				<text><![CDATA[Precio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="263" y="2" width="57" height="20" uuid="634e76ad-6af5-41dd-bb22-c15b53e275d6"/>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="49" height="20" uuid="3d880e70-6590-4bee-8358-08d7c516a5f9"/>
+				<text><![CDATA[Subtotal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="369" y="2" width="32" height="20" uuid="4717c7b8-d26a-4c72-b092-e78749c6a6bb"/>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="2" width="45" height="20" uuid="42eb7b12-0dd4-4a11-a27c-abb0a548ad4f"/>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="474" y="2" width="49" height="20" uuid="f265f3cf-d028-439e-9301-c6c2f5fd02f6"/>
+				<text><![CDATA[Pago]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="7" y="0" width="28" height="20" uuid="cbbc4d51-0ddc-4a77-9ff4-d0033018fbfa"/>
+				<textFieldExpression><![CDATA[$F{Id_Factura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="56" y="0" width="55" height="20" uuid="7c2c8225-57b6-49b5-803f-492dfa8927fc"/>
+				<textFieldExpression><![CDATA[$F{Nombre_proveedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="25" height="20" uuid="a044d379-33e1-40b9-8c5b-af77f8a4bb91"/>
+				<textFieldExpression><![CDATA[$F{Nit_proveedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="168" y="0" width="84" height="20" uuid="50dd7766-1c8b-4af3-a971-0dcb8ed5dcb1"/>
+				<textFieldExpression><![CDATA[$F{Nombre_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="29" height="20" uuid="0e5ff404-02b5-4e66-aacb-1e6f800ce617"/>
+				<textFieldExpression><![CDATA[$F{Precio_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="0" width="23" height="20" uuid="7517c7c6-6e39-48c7-a75f-3a75a8d8a3e0"/>
+				<textFieldExpression><![CDATA[$F{Cantidad_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="5" width="18" height="20" uuid="fe7c0cb4-1b2e-4a74-8ecd-ddf208594f59"/>
+				<textFieldExpression><![CDATA[$F{Subtotal_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="369" y="5" width="32" height="20" uuid="bca2594b-54bd-4e42-9f3e-ce5b1e6458bd"/>
+				<textFieldExpression><![CDATA[$F{Total_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="5" width="89" height="20" uuid="27c66d6e-56c0-48ef-97a3-8f78e85b5108"/>
+				<textFieldExpression><![CDATA[$F{Fecha_producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="490" y="5" width="68" height="20" uuid="f1f6872c-0bd1-48e2-ae13-cd88b3c66425"/>
+				<textFieldExpression><![CDATA[$F{Pago_producto}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="182623d6-5c66-4186-8890-71be82c9da96"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="bb5dcebf-2625-40ab-bad2-e01e6df93d09"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

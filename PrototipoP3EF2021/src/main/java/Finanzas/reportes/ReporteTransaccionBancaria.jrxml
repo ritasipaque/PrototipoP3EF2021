@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5e447a71-99d9-4e45-a9ff-edd87c53d077">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM finanzas.TransaccionBancaria;]]>
+	</queryString>
+	<field name="Codigo_Transaccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Fecha_Transaccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Beneficiario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Cuenta_Bancaria" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tipo_Transaccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Monto_Transaccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Concepto_Transaccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="95" splitType="Stretch">
+			<staticText>
+				<reportElement x="97" y="15" width="359" height="53" uuid="73e597af-5c22-403b-91f0-3c0b8e3da228"/>
+				<textElement>
+					<font fontName="Californian FB" size="36" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Transaccion Bancaria:]]></text>
+			</staticText>
+			<image>
+				<reportElement x="5" y="10" width="92" height="85" uuid="a73ad1ff-7b38-463f-b6b4-9e15aded396c"/>
+				<imageExpression><![CDATA["C:\\Users\\TagoKG\\Desktop\\Proyecto Seguridad\\SistemaHotelero\\src\\main\\java\\Finanzas\\reportes\\calk.jpg"]]></imageExpression>
+			</image>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="456" y="10" width="100" height="20" uuid="0542e791-ea75-432e-b623-573e1cab67f6"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="19" splitType="Stretch">
+			<line>
+				<reportElement x="2" y="18" width="551" height="1" uuid="0a417d0a-e500-437e-8bf8-9068cd76484c"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="79" height="20" uuid="050d0e56-ffaf-4052-a41f-9612dd6a77b0"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<text><![CDATA[Codigo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="0" width="79" height="20" uuid="d52859e1-50bb-4240-acba-1b36e53e324e"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="0" width="79" height="20" uuid="8548a278-2edb-4c98-8758-3ba84f8c9bae"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<text><![CDATA[Beneficiario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="0" width="79" height="20" uuid="09ea325e-36b3-43fe-8b4b-b7ab67808ec0"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<text><![CDATA[Cuenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="0" width="79" height="20" uuid="36413816-b34c-4d63-87b2-9927adbc651a"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<text><![CDATA[Tipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="0" width="79" height="20" uuid="5b0a0f45-73a7-4146-9087-e102b587ab1e"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<text><![CDATA[Monto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="474" y="0" width="79" height="20" uuid="4b587628-b261-44ca-bea1-117220f9243b"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<text><![CDATA[Concepto]]></text>
+			</staticText>
+			<line>
+				<reportElement x="2" y="20" width="551" height="1" uuid="8da6e969-2f6d-4651-b799-49c79e5f65ee"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="79" height="20" uuid="fe3af848-df99-48e3-adf6-d4651a58a428"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Codigo_Transaccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="0" width="79" height="20" uuid="31d35b0a-9865-441f-a5db-48d8366512dc"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Fecha_Transaccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="158" y="0" width="79" height="20" uuid="cba6b9d6-f161-44aa-ae21-5cdb494ded06"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Beneficiario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="237" y="0" width="79" height="20" uuid="c25551c0-a3ff-4fa2-9ef1-b3f0e81c5b23"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cuenta_Bancaria}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="316" y="0" width="79" height="20" uuid="46652455-0639-4702-99b1-e1f331fa5756"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Tipo_Transaccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="395" y="0" width="79" height="20" uuid="f3d6bff0-bb5f-4cf5-b3af-4b49d063c8d5"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Monto_Transaccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="0" width="79" height="20" uuid="08c4ba36-bcc3-4ffd-834b-064036d9ad89"/>
+				<textElement>
+					<font fontName="Californian FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Concepto_Transaccion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="29" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="226" y="24" width="100" height="20" uuid="f74a271e-4290-44b5-9ed2-2b0089ef75f2"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="9" splitType="Stretch"/>
+	</summary>
+</jasperReport>
